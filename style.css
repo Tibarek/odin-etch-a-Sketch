@@ -1,4 +1,21 @@
-.container {
-    border: solid black;
+body {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+}
+
+.square-row {
+
+}
+
+.square {
+    border: 1px solid #918e8e;
+    height: 35px;
+    width: 35px;
+
 }
