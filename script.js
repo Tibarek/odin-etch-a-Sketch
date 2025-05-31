@@ -12,7 +12,10 @@ function grid(gridSize){
             square.style.width = `${squareSize}px`;
             square.classList.add("square");
             square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "yellow";
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
             })
             squareRow.appendChild(square);
         }
