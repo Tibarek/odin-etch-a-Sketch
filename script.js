@@ -11,11 +11,16 @@ function grid(gridSize){
             square.style.height = `${squareSize}px`;
             square.style.width = `${squareSize}px`;
             square.classList.add("square");
+            square.style.opacity = 0.1;
             square.addEventListener("mouseover", () => {
                 const r = Math.floor(Math.random() * 256);
                 const g = Math.floor(Math.random() * 256);
                 const b = Math.floor(Math.random() * 256);
                 square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                
+                let currentOpacity = parseFloat(window.getComputedStyle(square).getPropertyValue('opacity'));
+                const newOpacity = Math.min(currentOpacity + 0.1, 1);
+                square.style.opacity = newOpacity;
             })
             squareRow.appendChild(square);
         }
